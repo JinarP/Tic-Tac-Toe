@@ -1,0 +1,42 @@
+body {
+    background-color: #dc3545;
+}
+
+.cell-option {
+    background: #ffffff;
+    height: 23vmin;
+    width: 23vmin;
+    border: none;
+    border-radius: 8px;
+    font-size: 12vmin;
+    color: #0a0027;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#showPlayer{
+    position: fixed;
+    font-weight: bold;
+    font-size: 30px;
+    left: 4em;
+    top: 110px;
+    height: 50px;
+    width: 150px;
+}
+#score{
+    position: fixed;
+    font-weight: bold;
+    font-size: 30px;
+    right: 4em;
+    top: 110px;
+    height: 50px;
+    width: 150px;
+}
+#text{
+    position: fixed;
+    font-weight: bold;
+    font-size: 35px;
+    left: 4em;
+    top: 170px;
+    height: 70px;
+    width: 150px;
+}
