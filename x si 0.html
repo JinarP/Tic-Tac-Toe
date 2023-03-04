@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>X si O</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
     <div id="showPlayer" ></div>
-    <div id = "score"></div>
+    <h1 id = "score"> SCORE: </h1>
+    <h1 id = "plyX"> PlayerX:
+        <span id = "scoreX">0</span>
+    </h1>
+    <h1 id = "ply0"> Player0:
+        <span id = "score0">0</span>
+    </h1>
     <table style="margin:auto;">
         <tr>
-            <td><button id = "myButton" value = "0"  class="cell-option" onclick="showBoard(this)"></button></td>
-            <td><button id = "myButton" value = "1"  class="cell-option" onclick="showBoard(this)"></button></td>
-            <td><button id = "myButton" value = "2"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton0" value = "0"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton1" value = "1"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton2" value = "2"  class="cell-option" onclick="showBoard(this)"></button></td>
         </tr>
         <tr>
-            <td><button id = "myButton" value = "3"  class="cell-option" onclick="showBoard(this)"></button></td>
-            <td><button id = "myButton" value = "4"  class="cell-option" onclick="showBoard(this)"></button></td>
-            <td><button id = "myButton" value = "5"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton3" value = "3"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton4" value = "4"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton5" value = "5"  class="cell-option" onclick="showBoard(this)"></button></td>
         </tr>
         <tr>
-            <td><button id = "myButton" value = "6"  class="cell-option" onclick="showBoard(this)"></button></td>
-            <td><button id = "myButton" value = "7"  class="cell-option" onclick="showBoard(this)"></button></td>
-            <td><button id = "myButton" value = "8"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton6" value = "6"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton7" value = "7"  class="cell-option" onclick="showBoard(this)"></button></td>
+            <td><button id = "myButton8" value = "8"  class="cell-option" onclick="showBoard(this)"></button></td>
         </tr>
     </table>
     <br>
-    <div style="text-align: center;" >
+    <div style="text-align: center">
         <button type = "button" id="startButton" class="btn btn-primary" onclick="resetGame()">
             New Game
         </button></div>

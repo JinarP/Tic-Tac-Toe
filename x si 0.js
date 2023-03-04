@@ -19,15 +19,12 @@ function firstRandom (min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-document.getElementById("score").innerHTML +=
-    'SCORE:\n' +
-    'PlayerX: ' + PlayerX +
-    '\n Player0: ' + Player0;
 if(currentPlayer == 0) {
     document.getElementById("showPlayer").innerHTML = "PUT X";
 } else {
     document.getElementById("showPlayer").innerHTML = "PUT 0";
 }
+
 function showBoard(button) {
     if(winner == false) {
         ++currentPlayer;
@@ -42,11 +39,10 @@ function showBoard(button) {
             document.getElementById("showPlayer").innerHTML = "PUT X";
 
         }
-        button.disabled = true;
         for (let i = 0; i < winningCombinations.length; ++i) {
             if (winningCombinations[i].every(value => Player_1.includes(value))) {
                 winner = true;
-                ++PlayerX
+                ++PlayerX;
                 document.getElementById("text").innerText =
                     "PlayerX won";
             }
@@ -62,14 +58,26 @@ function showBoard(button) {
         if (first == 0 && currentPlayer == 9 && !winner) {
             document.getElementById("text").innerText =
                 "Is equal, try a new game";
-        }
-        if (first == 1 && currentPlayer == 10 && !winner) {
+                 winner = true;
+        }if (first == 1 && currentPlayer == 10 && !winner) {
             document.getElementById("text").innerText =
                 "Is equal, try a new game";
+                 winner = true;
         }
+
     }
  }
 
 function resetGame () {
-    window.location.reload();
+    document.getElementById("scoreX").innerText = PlayerX;
+    document.getElementById("score0").innerText = Player0;
+    currentPlayer = firstRandom(0, 2);
+    first = currentPlayer;
+    Player_1.length = 0;
+    Player_2.length = 0;
+    for (let i = 0; i < 9; ++i) {
+        document.getElementById("myButton" + i).innerHTML = '';
+    }
+    document.getElementById("text").innerHTML = '';
+    winner = false;
 }
